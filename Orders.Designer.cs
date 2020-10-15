@@ -28,74 +28,98 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.checkedListBoxOrders = new System.Windows.Forms.CheckedListBox();
+            this.lblHeading = new System.Windows.Forms.Label();
             this.lblConfirm = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnConfirm = new System.Windows.Forms.Button();
             this.listBoxOrders = new System.Windows.Forms.ListBox();
+            this.btnLogout = new System.Windows.Forms.Button();
+            this.btnStock = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // checkedListBox1
+            // checkedListBoxOrders
             // 
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Items.AddRange(new object[] {
+            this.checkedListBoxOrders.FormattingEnabled = true;
+            this.checkedListBoxOrders.Items.AddRange(new object[] {
             "hello ",
             "okay"});
-            this.checkedListBox1.Location = new System.Drawing.Point(44, 139);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(151, 157);
-            this.checkedListBox1.TabIndex = 0;
-            this.checkedListBox1.SelectedIndexChanged += new System.EventHandler(this.checkedListBox1_SelectedIndexChanged);
+            this.checkedListBoxOrders.Location = new System.Drawing.Point(20, 63);
+            this.checkedListBoxOrders.Name = "checkedListBoxOrders";
+            this.checkedListBoxOrders.Size = new System.Drawing.Size(151, 157);
+            this.checkedListBoxOrders.TabIndex = 0;
+            this.checkedListBoxOrders.SelectedIndexChanged += new System.EventHandler(this.checkedListBox1_SelectedIndexChanged);
             // 
-            // label1
+            // lblHeading
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 49);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(52, 17);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Orders";
+            this.lblHeading.AutoSize = true;
+            this.lblHeading.Location = new System.Drawing.Point(17, 18);
+            this.lblHeading.Name = "lblHeading";
+            this.lblHeading.Size = new System.Drawing.Size(52, 17);
+            this.lblHeading.TabIndex = 1;
+            this.lblHeading.Text = "Orders";
             // 
             // lblConfirm
             // 
             this.lblConfirm.AutoSize = true;
-            this.lblConfirm.Location = new System.Drawing.Point(41, 340);
+            this.lblConfirm.Location = new System.Drawing.Point(17, 263);
             this.lblConfirm.Name = "lblConfirm";
             this.lblConfirm.Size = new System.Drawing.Size(28, 17);
             this.lblConfirm.TabIndex = 2;
             this.lblConfirm.Text = ".....";
             this.lblConfirm.Visible = false;
             // 
-            // button1
+            // btnConfirm
             // 
-            this.button1.Location = new System.Drawing.Point(44, 397);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Confirm";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Visible = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnConfirm.Location = new System.Drawing.Point(199, 273);
+            this.btnConfirm.Name = "btnConfirm";
+            this.btnConfirm.Size = new System.Drawing.Size(75, 23);
+            this.btnConfirm.TabIndex = 3;
+            this.btnConfirm.Text = "Confirm";
+            this.btnConfirm.UseVisualStyleBackColor = true;
+            this.btnConfirm.Visible = false;
+            this.btnConfirm.Click += new System.EventHandler(this.button1_Click);
             // 
             // listBoxOrders
             // 
             this.listBoxOrders.FormattingEnabled = true;
             this.listBoxOrders.ItemHeight = 16;
-            this.listBoxOrders.Location = new System.Drawing.Point(230, 139);
+            this.listBoxOrders.Location = new System.Drawing.Point(199, 63);
             this.listBoxOrders.Name = "listBoxOrders";
             this.listBoxOrders.Size = new System.Drawing.Size(296, 148);
             this.listBoxOrders.TabIndex = 4;
+            // 
+            // btnLogout
+            // 
+            this.btnLogout.Location = new System.Drawing.Point(677, 395);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(75, 23);
+            this.btnLogout.TabIndex = 5;
+            this.btnLogout.Text = "LogOut";
+            this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // btnStock
+            // 
+            this.btnStock.Location = new System.Drawing.Point(20, 383);
+            this.btnStock.Name = "btnStock";
+            this.btnStock.Size = new System.Drawing.Size(93, 55);
+            this.btnStock.TabIndex = 6;
+            this.btnStock.Text = "Stock Manage";
+            this.btnStock.UseVisualStyleBackColor = true;
+            this.btnStock.Click += new System.EventHandler(this.btnStock_Click);
             // 
             // Orders
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnStock);
+            this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.listBoxOrders);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnConfirm);
             this.Controls.Add(this.lblConfirm);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.checkedListBox1);
+            this.Controls.Add(this.lblHeading);
+            this.Controls.Add(this.checkedListBoxOrders);
             this.Name = "Orders";
             this.Text = "Orders";
             this.Load += new System.EventHandler(this.Orders_Load);
@@ -106,10 +130,12 @@
 
         #endregion
 
-        private System.Windows.Forms.CheckedListBox checkedListBox1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.CheckedListBox checkedListBoxOrders;
+        private System.Windows.Forms.Label lblHeading;
         private System.Windows.Forms.Label lblConfirm;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnConfirm;
         private System.Windows.Forms.ListBox listBoxOrders;
+        private System.Windows.Forms.Button btnLogout;
+        private System.Windows.Forms.Button btnStock;
     }
 }

@@ -75,7 +75,7 @@ namespace KitchenStaff
         private void button3_Click(object sender, EventArgs e)
         {
 
-            string query = "UPDATE  Stock SET Name='"+textBoxUpName.Text+ "' ,Cost='" + int.Parse(textBoxUpCost.Text )+ "',Expriration Date='" + textBoxUpExpire.Text + "' , Quantity='" + int.Parse(textBoxUpQuant.Text) + "'  WHERE Name = '"+int.Parse(comboBox1.SelectedItem.ToString())+"'";
+            string query = "UPDATE  Stock SET Name='"+textBoxUpName.Text+ "' ,Cost='" + int.Parse(textBoxUpCost.Text )+ "',Expriration Date='" + textBoxUpExpire.Text + "' , Quantity='" + int.Parse(textBoxUpQuant.Text) + "'  WHERE Name = '"+int.Parse(comboBoxStockID.SelectedItem.ToString())+"'";
 
             connection.Open();
             MySqlCommand cmd = new MySqlCommand();
@@ -102,6 +102,47 @@ namespace KitchenStaff
 
         private void Stock_Load(object sender, EventArgs e)
         {
+
+            this.BackColor = System.Drawing.Color.SlateBlue;
+            lblStockHeading.ForeColor = System.Drawing.Color.White;
+            
+            // ADD 
+            
+            lblAddCost.ForeColor = System.Drawing.Color.White;
+            lblAddExpire.ForeColor = System.Drawing.Color.White;
+            lblAddHeading.ForeColor = System.Drawing.Color.White;
+            lblAddName.ForeColor = System.Drawing.Color.White;
+            lblAddQuantity.ForeColor = System.Drawing.Color.White;
+
+            btnConfirmAdd.ForeColor = System.Drawing.Color.White;
+
+            btnConfirmAdd.BackColor = System.Drawing.Color.MidnightBlue;
+
+            // LOW/EX
+            lblExpireHeading.ForeColor = System.Drawing.Color.White;
+            lblLowHeading.ForeColor = System.Drawing.Color.White;
+            
+
+            //Delete
+            lblSubHeadingDelete.ForeColor = System.Drawing.Color.White;
+            lblDeleteHeading.ForeColor = System.Drawing.Color.White;
+            comboBoxDelete.ForeColor = System.Drawing.Color.White;
+            btnConfirmDelete.ForeColor = System.Drawing.Color.White;
+
+            btnConfirmDelete.BackColor = System.Drawing.Color.MidnightBlue;
+
+            //update 
+            lblStockID.ForeColor = System.Drawing.Color.White;
+            lblCostUp.ForeColor = System.Drawing.Color.White;
+            lblExpireUp.ForeColor = System.Drawing.Color.White;
+            lblNameStockUp.ForeColor = System.Drawing.Color.White;
+            lblUpdateHeading.ForeColor = System.Drawing.Color.White;
+            lblQuantityUp.ForeColor = System.Drawing.Color.White;
+            comboBoxStockID.ForeColor = System.Drawing.Color.White;
+            btnConfirmUp.ForeColor = System.Drawing.Color.White;
+
+            btnConfirmUp.BackColor = System.Drawing.Color.MidnightBlue;
+
             connectionstring = "SERVE=" + server + ";" + "DATABASE=" + database + ";" + "UID" + uid
                 + ";" + "PASSWORD" + password + ";";
             connection = new MySqlConnection(connectionstring);
@@ -163,9 +204,9 @@ namespace KitchenStaff
                 while (dataR3.Read())
                 {
                     stockID = int.Parse(dataR3["StockID"]+"");
-                    recipeQuant = dataR["Quantity"] * 5;
+                    recipeQuant = int.Parse(dataR["Quantity"]+"") * 5;
                     //open connection
-                    connection.open();
+                    connection.Open();
                     //put in comand
                     string query = "SELECT * FROM Stock WHERE StockID ='" + stockID + "' ";
                      cmd = new MySqlCommand(query, connection);
@@ -223,7 +264,7 @@ namespace KitchenStaff
 
         private void comboBoxDelete_SelectedIndexChanged(object sender, EventArgs e)
         {
-            int stockid = int.Parse(comboBox1.SelectedItem.ToString());
+            int stockid = int.Parse(comboBoxStockID.SelectedItem.ToString());
             string query = "SELECT * FROM Stock WHERE '"+stockid+"' ";
             //open connection
             connection.Open();
@@ -261,6 +302,20 @@ namespace KitchenStaff
             dataR.Close();
             // close connection 
             connection.Close();
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            Logout logoutForm = new Logout();
+            logoutForm.ShowDialog();
+            this.Close();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            Orders ordersform = new Orders();
+            ordersform.ShowDialog();
+            this.Close();
         }
     }
 }

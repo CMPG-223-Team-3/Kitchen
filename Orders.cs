@@ -35,7 +35,7 @@ namespace KitchenStaff
             
 
             // make stock less 
-            string query = "SELECT * FROM ORDERS WHERE OrderID ='" + checkedListBox1.CheckedItems.ToString() + "'";
+            string query = "SELECT * FROM ORDERS WHERE OrderID ='" + checkedListBoxOrders.CheckedItems.ToString() + "'";
 
             //open connection
             connection.Open();
@@ -86,7 +86,7 @@ namespace KitchenStaff
 
             //comfirms order is done 
             // update ready status 
-            query = "UPDATE  Orders SET Ready='true' WHERE  OrderID ='"+ checkedListBox1.CheckedItems.ToString() + "'";
+            query = "UPDATE  Orders SET Ready='true' WHERE  OrderID ='"+ checkedListBoxOrders.CheckedItems.ToString() + "'";
 
             connection.Open();
             cmd = new MySqlCommand();
@@ -100,7 +100,7 @@ namespace KitchenStaff
 
 
 
-            checkedListBox1.Items.Clear();
+            checkedListBoxOrders.Items.Clear();
             listBoxOrders.Items.Clear();
             // load again to get rid of ready orders on checkboxs list 
             loadOrders();
@@ -124,7 +124,7 @@ namespace KitchenStaff
             while (dataR.Read())
             {
 
-                checkedListBox1.Items.Add(dataR["OrderID"] + "" ,false);
+                checkedListBoxOrders.Items.Add(dataR["OrderID"] + "" ,false);
                 // display orders with menue item name 
                 int orderID = int.Parse(dataR["OrderID"]+"");
 
@@ -160,7 +160,23 @@ namespace KitchenStaff
         
         private void Orders_Load(object sender, EventArgs e)
         {
-            
+            checkedListBoxOrders.BackColor = System.Drawing.Color.SlateBlue;
+            listBoxOrders.BackColor = System.Drawing.Color.SlateBlue;
+            this.BackColor = System.Drawing.Color.SlateBlue;
+
+            lblConfirm.ForeColor = System.Drawing.Color.White;
+            lblHeading.ForeColor = System.Drawing.Color.White;
+
+            checkedListBoxOrders.ForeColor = System.Drawing.Color.White;
+            listBoxOrders.ForeColor = System.Drawing.Color.White;
+
+            btnConfirm.ForeColor = System.Drawing.Color.White;
+
+            btnConfirm.BackColor = System.Drawing.Color.MidnightBlue;
+
+
+
+
             connectionstring = "SERVE="+server+";"+"DATABASE="+database+";"+"UID"+uid
                 +";"+"PASSWORD"+password+";";
             connection = new MySqlConnection(connectionstring);
@@ -174,8 +190,22 @@ namespace KitchenStaff
             // make lable and button visible 
 
             lblConfirm.Visible = true;
-            button1.Visible = true;
+            btnConfirm.Visible = true;
             lblConfirm.Text = " Confirm below that these orders are complete";
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            Logout logoutForm = new Logout();
+            logoutForm.ShowDialog();
+            this.Close();
+        }
+
+        private void btnStock_Click(object sender, EventArgs e)
+        {
+            Stock stockform = new Stock();
+            stockform.ShowDialog();
+            this.Close();
         }
     }
 }

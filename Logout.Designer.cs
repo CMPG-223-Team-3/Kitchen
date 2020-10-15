@@ -28,76 +28,100 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.lblHeading = new System.Windows.Forms.Label();
+            this.lblIN = new System.Windows.Forms.Label();
+            this.lblOUT = new System.Windows.Forms.Label();
+            this.textBoxIN = new System.Windows.Forms.TextBox();
+            this.textBoxOUT = new System.Windows.Forms.TextBox();
+            this.btnLogout = new System.Windows.Forms.Button();
+            this.btnOrdderform = new System.Windows.Forms.Button();
+            this.btnStockform = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // label1
+            // lblHeading
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(82, 37);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(52, 17);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Logout";
+            this.lblHeading.AutoSize = true;
+            this.lblHeading.Location = new System.Drawing.Point(82, 37);
+            this.lblHeading.Name = "lblHeading";
+            this.lblHeading.Size = new System.Drawing.Size(52, 17);
+            this.lblHeading.TabIndex = 0;
+            this.lblHeading.Text = "Logout";
             // 
-            // label2
+            // lblIN
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(35, 112);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(58, 17);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Time in ";
+            this.lblIN.AutoSize = true;
+            this.lblIN.Location = new System.Drawing.Point(35, 112);
+            this.lblIN.Name = "lblIN";
+            this.lblIN.Size = new System.Drawing.Size(58, 17);
+            this.lblIN.TabIndex = 1;
+            this.lblIN.Text = "Time in ";
             // 
-            // label3
+            // lblOUT
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(35, 166);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(67, 17);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Time out ";
+            this.lblOUT.AutoSize = true;
+            this.lblOUT.Location = new System.Drawing.Point(35, 166);
+            this.lblOUT.Name = "lblOUT";
+            this.lblOUT.Size = new System.Drawing.Size(67, 17);
+            this.lblOUT.TabIndex = 2;
+            this.lblOUT.Text = "Time out ";
             // 
-            // textBox1
+            // textBoxIN
             // 
-            this.textBox1.Location = new System.Drawing.Point(116, 112);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
-            this.textBox1.TabIndex = 3;
+            this.textBoxIN.Location = new System.Drawing.Point(116, 112);
+            this.textBoxIN.Name = "textBoxIN";
+            this.textBoxIN.Size = new System.Drawing.Size(100, 22);
+            this.textBoxIN.TabIndex = 3;
             // 
-            // textBox2
+            // textBoxOUT
             // 
-            this.textBox2.Location = new System.Drawing.Point(116, 166);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 22);
-            this.textBox2.TabIndex = 4;
+            this.textBoxOUT.Location = new System.Drawing.Point(116, 166);
+            this.textBoxOUT.Name = "textBoxOUT";
+            this.textBoxOUT.Size = new System.Drawing.Size(100, 22);
+            this.textBoxOUT.TabIndex = 4;
             // 
-            // button1
+            // btnLogout
             // 
-            this.button1.Location = new System.Drawing.Point(38, 260);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Confirm Logout";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnLogout.Location = new System.Drawing.Point(116, 248);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(75, 23);
+            this.btnLogout.TabIndex = 5;
+            this.btnLogout.Text = "Confirm Logout";
+            this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btnOrdderform
+            // 
+            this.btnOrdderform.Location = new System.Drawing.Point(38, 385);
+            this.btnOrdderform.Name = "btnOrdderform";
+            this.btnOrdderform.Size = new System.Drawing.Size(79, 43);
+            this.btnOrdderform.TabIndex = 6;
+            this.btnOrdderform.Text = "Orders manage";
+            this.btnOrdderform.UseVisualStyleBackColor = true;
+            this.btnOrdderform.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // btnStockform
+            // 
+            this.btnStockform.Location = new System.Drawing.Point(684, 385);
+            this.btnStockform.Name = "btnStockform";
+            this.btnStockform.Size = new System.Drawing.Size(78, 43);
+            this.btnStockform.TabIndex = 7;
+            this.btnStockform.Text = "Stock Manage";
+            this.btnStockform.UseVisualStyleBackColor = true;
+            this.btnStockform.Click += new System.EventHandler(this.button2_Click);
             // 
             // Logout
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnStockform);
+            this.Controls.Add(this.btnOrdderform);
+            this.Controls.Add(this.btnLogout);
+            this.Controls.Add(this.textBoxOUT);
+            this.Controls.Add(this.textBoxIN);
+            this.Controls.Add(this.lblOUT);
+            this.Controls.Add(this.lblIN);
+            this.Controls.Add(this.lblHeading);
             this.Name = "Logout";
             this.Text = "Logout";
             this.Load += new System.EventHandler(this.Logout_Load);
@@ -108,11 +132,13 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label lblHeading;
+        private System.Windows.Forms.Label lblIN;
+        private System.Windows.Forms.Label lblOUT;
+        private System.Windows.Forms.TextBox textBoxIN;
+        private System.Windows.Forms.TextBox textBoxOUT;
+        private System.Windows.Forms.Button btnLogout;
+        private System.Windows.Forms.Button btnOrdderform;
+        private System.Windows.Forms.Button btnStockform;
     }
 }

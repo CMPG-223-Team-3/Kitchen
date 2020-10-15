@@ -29,43 +29,45 @@
         private void InitializeComponent()
         {
             this.listBoxExpire = new System.Windows.Forms.ListBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.lblStockHeading = new System.Windows.Forms.Label();
+            this.lblExpireHeading = new System.Windows.Forms.Label();
+            this.tabControlStock = new System.Windows.Forms.TabControl();
+            this.tabPageAdd = new System.Windows.Forms.TabPage();
             this.textBoxQuant = new System.Windows.Forms.TextBox();
             this.textBoxExpire = new System.Windows.Forms.TextBox();
             this.textBoxCost = new System.Windows.Forms.TextBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
+            this.lblAddQuantity = new System.Windows.Forms.Label();
+            this.lblAddExpire = new System.Windows.Forms.Label();
+            this.lblAddCost = new System.Windows.Forms.Label();
             this.textBoxName = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.btnConfirmAdd = new System.Windows.Forms.Button();
+            this.lblAddName = new System.Windows.Forms.Label();
+            this.lblAddHeading = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.listBoxLow = new System.Windows.Forms.ListBox();
-            this.label9 = new System.Windows.Forms.Label();
+            this.lblLowHeading = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.comboBoxDelete = new System.Windows.Forms.ComboBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.btnConfirmDelete = new System.Windows.Forms.Button();
+            this.lblSubHeadingDelete = new System.Windows.Forms.Label();
+            this.lblDeleteHeading = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.textBoxUpQuant = new System.Windows.Forms.TextBox();
             this.textBoxUpExpire = new System.Windows.Forms.TextBox();
             this.textBoxUpCost = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.lblQuantityUp = new System.Windows.Forms.Label();
+            this.lblExpireUp = new System.Windows.Forms.Label();
+            this.lblCostUp = new System.Windows.Forms.Label();
+            this.lblStockID = new System.Windows.Forms.Label();
+            this.comboBoxStockID = new System.Windows.Forms.ComboBox();
             this.textBoxUpName = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
-            this.tabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
+            this.lblNameStockUp = new System.Windows.Forms.Label();
+            this.btnConfirmUp = new System.Windows.Forms.Button();
+            this.lblUpdateHeading = new System.Windows.Forms.Label();
+            this.btnOrders = new System.Windows.Forms.Button();
+            this.btnLogout = new System.Windows.Forms.Button();
+            this.tabControlStock.SuspendLayout();
+            this.tabPageAdd.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.tabPage4.SuspendLayout();
@@ -80,56 +82,56 @@
             this.listBoxExpire.Size = new System.Drawing.Size(120, 84);
             this.listBoxExpire.TabIndex = 0;
             // 
-            // label1
+            // lblStockHeading
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 13);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(43, 17);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Stock";
+            this.lblStockHeading.AutoSize = true;
+            this.lblStockHeading.Location = new System.Drawing.Point(13, 13);
+            this.lblStockHeading.Name = "lblStockHeading";
+            this.lblStockHeading.Size = new System.Drawing.Size(43, 17);
+            this.lblStockHeading.TabIndex = 1;
+            this.lblStockHeading.Text = "Stock";
             // 
-            // label2
+            // lblExpireHeading
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(133, 45);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(47, 17);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Expire";
+            this.lblExpireHeading.AutoSize = true;
+            this.lblExpireHeading.Location = new System.Drawing.Point(133, 45);
+            this.lblExpireHeading.Name = "lblExpireHeading";
+            this.lblExpireHeading.Size = new System.Drawing.Size(47, 17);
+            this.lblExpireHeading.TabIndex = 2;
+            this.lblExpireHeading.Text = "Expire";
             // 
-            // tabControl1
+            // tabControlStock
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Controls.Add(this.tabPage4);
-            this.tabControl1.Location = new System.Drawing.Point(16, 33);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(772, 405);
-            this.tabControl1.TabIndex = 3;
-            this.tabControl1.Selected += new System.Windows.Forms.TabControlEventHandler(this.tabControl1_Selected);
+            this.tabControlStock.Controls.Add(this.tabPageAdd);
+            this.tabControlStock.Controls.Add(this.tabPage2);
+            this.tabControlStock.Controls.Add(this.tabPage3);
+            this.tabControlStock.Controls.Add(this.tabPage4);
+            this.tabControlStock.Location = new System.Drawing.Point(16, 33);
+            this.tabControlStock.Name = "tabControlStock";
+            this.tabControlStock.SelectedIndex = 0;
+            this.tabControlStock.Size = new System.Drawing.Size(772, 405);
+            this.tabControlStock.TabIndex = 3;
+            this.tabControlStock.Selected += new System.Windows.Forms.TabControlEventHandler(this.tabControl1_Selected);
             // 
-            // tabPage1
+            // tabPageAdd
             // 
-            this.tabPage1.Controls.Add(this.textBoxQuant);
-            this.tabPage1.Controls.Add(this.textBoxExpire);
-            this.tabPage1.Controls.Add(this.textBoxCost);
-            this.tabPage1.Controls.Add(this.label16);
-            this.tabPage1.Controls.Add(this.label15);
-            this.tabPage1.Controls.Add(this.label14);
-            this.tabPage1.Controls.Add(this.textBoxName);
-            this.tabPage1.Controls.Add(this.button1);
-            this.tabPage1.Controls.Add(this.label4);
-            this.tabPage1.Controls.Add(this.label3);
-            this.tabPage1.Location = new System.Drawing.Point(4, 25);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(764, 376);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "tabPage1";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.tabPageAdd.Controls.Add(this.textBoxQuant);
+            this.tabPageAdd.Controls.Add(this.textBoxExpire);
+            this.tabPageAdd.Controls.Add(this.textBoxCost);
+            this.tabPageAdd.Controls.Add(this.lblAddQuantity);
+            this.tabPageAdd.Controls.Add(this.lblAddExpire);
+            this.tabPageAdd.Controls.Add(this.lblAddCost);
+            this.tabPageAdd.Controls.Add(this.textBoxName);
+            this.tabPageAdd.Controls.Add(this.btnConfirmAdd);
+            this.tabPageAdd.Controls.Add(this.lblAddName);
+            this.tabPageAdd.Controls.Add(this.lblAddHeading);
+            this.tabPageAdd.Location = new System.Drawing.Point(4, 25);
+            this.tabPageAdd.Name = "tabPageAdd";
+            this.tabPageAdd.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageAdd.Size = new System.Drawing.Size(764, 376);
+            this.tabPageAdd.TabIndex = 0;
+            this.tabPageAdd.Text = "tabPage1";
+            this.tabPageAdd.UseVisualStyleBackColor = true;
             // 
             // textBoxQuant
             // 
@@ -152,32 +154,32 @@
             this.textBoxCost.Size = new System.Drawing.Size(100, 22);
             this.textBoxCost.TabIndex = 7;
             // 
-            // label16
+            // lblAddQuantity
             // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(64, 173);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(61, 17);
-            this.label16.TabIndex = 6;
-            this.label16.Text = "Qauntity";
+            this.lblAddQuantity.AutoSize = true;
+            this.lblAddQuantity.Location = new System.Drawing.Point(64, 173);
+            this.lblAddQuantity.Name = "lblAddQuantity";
+            this.lblAddQuantity.Size = new System.Drawing.Size(61, 17);
+            this.lblAddQuantity.TabIndex = 6;
+            this.lblAddQuantity.Text = "Qauntity";
             // 
-            // label15
+            // lblAddExpire
             // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(61, 136);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(102, 17);
-            this.label15.TabIndex = 5;
-            this.label15.Text = "Expiration date";
+            this.lblAddExpire.AutoSize = true;
+            this.lblAddExpire.Location = new System.Drawing.Point(61, 136);
+            this.lblAddExpire.Name = "lblAddExpire";
+            this.lblAddExpire.Size = new System.Drawing.Size(102, 17);
+            this.lblAddExpire.TabIndex = 5;
+            this.lblAddExpire.Text = "Expiration date";
             // 
-            // label14
+            // lblAddCost
             // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(64, 98);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(36, 17);
-            this.label14.TabIndex = 4;
-            this.label14.Text = "Cost";
+            this.lblAddCost.AutoSize = true;
+            this.lblAddCost.Location = new System.Drawing.Point(64, 98);
+            this.lblAddCost.Name = "lblAddCost";
+            this.lblAddCost.Size = new System.Drawing.Size(36, 17);
+            this.lblAddCost.TabIndex = 4;
+            this.lblAddCost.Text = "Cost";
             // 
             // textBoxName
             // 
@@ -186,39 +188,39 @@
             this.textBoxName.Size = new System.Drawing.Size(100, 22);
             this.textBoxName.TabIndex = 3;
             // 
-            // button1
+            // btnConfirmAdd
             // 
-            this.button1.Location = new System.Drawing.Point(13, 235);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "confirm";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnConfirmAdd.Location = new System.Drawing.Point(67, 300);
+            this.btnConfirmAdd.Name = "btnConfirmAdd";
+            this.btnConfirmAdd.Size = new System.Drawing.Size(75, 23);
+            this.btnConfirmAdd.TabIndex = 2;
+            this.btnConfirmAdd.Text = "confirm";
+            this.btnConfirmAdd.UseVisualStyleBackColor = true;
+            this.btnConfirmAdd.Click += new System.EventHandler(this.button1_Click);
             // 
-            // label4
+            // lblAddName
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(61, 60);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(45, 17);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Name";
+            this.lblAddName.AutoSize = true;
+            this.lblAddName.Location = new System.Drawing.Point(64, 60);
+            this.lblAddName.Name = "lblAddName";
+            this.lblAddName.Size = new System.Drawing.Size(45, 17);
+            this.lblAddName.TabIndex = 1;
+            this.lblAddName.Text = "Name";
             // 
-            // label3
+            // lblAddHeading
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(36, 19);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(37, 17);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "ADD";
+            this.lblAddHeading.AutoSize = true;
+            this.lblAddHeading.Location = new System.Drawing.Point(36, 19);
+            this.lblAddHeading.Name = "lblAddHeading";
+            this.lblAddHeading.Size = new System.Drawing.Size(37, 17);
+            this.lblAddHeading.TabIndex = 0;
+            this.lblAddHeading.Text = "ADD";
             // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.listBoxLow);
-            this.tabPage2.Controls.Add(this.label9);
-            this.tabPage2.Controls.Add(this.label2);
+            this.tabPage2.Controls.Add(this.lblLowHeading);
+            this.tabPage2.Controls.Add(this.lblExpireHeading);
             this.tabPage2.Controls.Add(this.listBoxExpire);
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
@@ -237,21 +239,21 @@
             this.listBoxLow.Size = new System.Drawing.Size(120, 84);
             this.listBoxLow.TabIndex = 4;
             // 
-            // label9
+            // lblLowHeading
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(403, 45);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(33, 17);
-            this.label9.TabIndex = 3;
-            this.label9.Text = "Low";
+            this.lblLowHeading.AutoSize = true;
+            this.lblLowHeading.Location = new System.Drawing.Point(403, 45);
+            this.lblLowHeading.Name = "lblLowHeading";
+            this.lblLowHeading.Size = new System.Drawing.Size(33, 17);
+            this.lblLowHeading.TabIndex = 3;
+            this.lblLowHeading.Text = "Low";
             // 
             // tabPage3
             // 
             this.tabPage3.Controls.Add(this.comboBoxDelete);
-            this.tabPage3.Controls.Add(this.button2);
-            this.tabPage3.Controls.Add(this.label6);
-            this.tabPage3.Controls.Add(this.label5);
+            this.tabPage3.Controls.Add(this.btnConfirmDelete);
+            this.tabPage3.Controls.Add(this.lblSubHeadingDelete);
+            this.tabPage3.Controls.Add(this.lblDeleteHeading);
             this.tabPage3.Location = new System.Drawing.Point(4, 25);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
@@ -270,48 +272,48 @@
             this.comboBoxDelete.SelectedIndexChanged += new System.EventHandler(this.comboBoxDelete_SelectedIndexChanged);
             this.comboBoxDelete.Click += new System.EventHandler(this.comboBox2_Click);
             // 
-            // button2
+            // btnConfirmDelete
             // 
-            this.button2.Location = new System.Drawing.Point(39, 195);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(89, 52);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Confrim Delete";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnConfirmDelete.Location = new System.Drawing.Point(39, 195);
+            this.btnConfirmDelete.Name = "btnConfirmDelete";
+            this.btnConfirmDelete.Size = new System.Drawing.Size(89, 52);
+            this.btnConfirmDelete.TabIndex = 3;
+            this.btnConfirmDelete.Text = "Confrim Delete";
+            this.btnConfirmDelete.UseVisualStyleBackColor = true;
+            this.btnConfirmDelete.Click += new System.EventHandler(this.button2_Click);
             // 
-            // label6
+            // lblSubHeadingDelete
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(36, 81);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(143, 17);
-            this.label6.TabIndex = 1;
-            this.label6.Text = "StockID to be deleted";
+            this.lblSubHeadingDelete.AutoSize = true;
+            this.lblSubHeadingDelete.Location = new System.Drawing.Point(36, 81);
+            this.lblSubHeadingDelete.Name = "lblSubHeadingDelete";
+            this.lblSubHeadingDelete.Size = new System.Drawing.Size(143, 17);
+            this.lblSubHeadingDelete.TabIndex = 1;
+            this.lblSubHeadingDelete.Text = "StockID to be deleted";
             // 
-            // label5
+            // lblDeleteHeading
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 3);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(49, 17);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Delete";
+            this.lblDeleteHeading.AutoSize = true;
+            this.lblDeleteHeading.Location = new System.Drawing.Point(6, 3);
+            this.lblDeleteHeading.Name = "lblDeleteHeading";
+            this.lblDeleteHeading.Size = new System.Drawing.Size(49, 17);
+            this.lblDeleteHeading.TabIndex = 0;
+            this.lblDeleteHeading.Text = "Delete";
             // 
             // tabPage4
             // 
             this.tabPage4.Controls.Add(this.textBoxUpQuant);
             this.tabPage4.Controls.Add(this.textBoxUpExpire);
             this.tabPage4.Controls.Add(this.textBoxUpCost);
-            this.tabPage4.Controls.Add(this.label13);
-            this.tabPage4.Controls.Add(this.label12);
-            this.tabPage4.Controls.Add(this.label11);
-            this.tabPage4.Controls.Add(this.label10);
-            this.tabPage4.Controls.Add(this.comboBox1);
+            this.tabPage4.Controls.Add(this.lblQuantityUp);
+            this.tabPage4.Controls.Add(this.lblExpireUp);
+            this.tabPage4.Controls.Add(this.lblCostUp);
+            this.tabPage4.Controls.Add(this.lblStockID);
+            this.tabPage4.Controls.Add(this.comboBoxStockID);
             this.tabPage4.Controls.Add(this.textBoxUpName);
-            this.tabPage4.Controls.Add(this.label8);
-            this.tabPage4.Controls.Add(this.button3);
-            this.tabPage4.Controls.Add(this.label7);
+            this.tabPage4.Controls.Add(this.lblNameStockUp);
+            this.tabPage4.Controls.Add(this.btnConfirmUp);
+            this.tabPage4.Controls.Add(this.lblUpdateHeading);
             this.tabPage4.Location = new System.Drawing.Point(4, 25);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
@@ -341,50 +343,50 @@
             this.textBoxUpCost.Size = new System.Drawing.Size(100, 22);
             this.textBoxUpCost.TabIndex = 9;
             // 
-            // label13
+            // lblQuantityUp
             // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(262, 211);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(61, 17);
-            this.label13.TabIndex = 8;
-            this.label13.Text = "Quantity";
+            this.lblQuantityUp.AutoSize = true;
+            this.lblQuantityUp.Location = new System.Drawing.Point(262, 211);
+            this.lblQuantityUp.Name = "lblQuantityUp";
+            this.lblQuantityUp.Size = new System.Drawing.Size(61, 17);
+            this.lblQuantityUp.TabIndex = 8;
+            this.lblQuantityUp.Text = "Quantity";
             // 
-            // label12
+            // lblExpireUp
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(248, 173);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(75, 17);
-            this.label12.TabIndex = 7;
-            this.label12.Text = "Expiredate";
+            this.lblExpireUp.AutoSize = true;
+            this.lblExpireUp.Location = new System.Drawing.Point(248, 173);
+            this.lblExpireUp.Name = "lblExpireUp";
+            this.lblExpireUp.Size = new System.Drawing.Size(75, 17);
+            this.lblExpireUp.TabIndex = 7;
+            this.lblExpireUp.Text = "Expiredate";
             // 
-            // label11
+            // lblCostUp
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(287, 139);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(36, 17);
-            this.label11.TabIndex = 6;
-            this.label11.Text = "Cost";
+            this.lblCostUp.AutoSize = true;
+            this.lblCostUp.Location = new System.Drawing.Point(287, 139);
+            this.lblCostUp.Name = "lblCostUp";
+            this.lblCostUp.Size = new System.Drawing.Size(36, 17);
+            this.lblCostUp.TabIndex = 6;
+            this.lblCostUp.Text = "Cost";
             // 
-            // label10
+            // lblStockID
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(249, 44);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(63, 17);
-            this.label10.TabIndex = 5;
-            this.label10.Text = "StockIDs";
+            this.lblStockID.AutoSize = true;
+            this.lblStockID.Location = new System.Drawing.Point(249, 44);
+            this.lblStockID.Name = "lblStockID";
+            this.lblStockID.Size = new System.Drawing.Size(63, 17);
+            this.lblStockID.TabIndex = 5;
+            this.lblStockID.Text = "StockIDs";
             // 
-            // comboBox1
+            // comboBoxStockID
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(349, 37);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
-            this.comboBox1.TabIndex = 4;
-            this.comboBox1.Click += new System.EventHandler(this.comboBox1_Click);
+            this.comboBoxStockID.FormattingEnabled = true;
+            this.comboBoxStockID.Location = new System.Drawing.Point(349, 37);
+            this.comboBoxStockID.Name = "comboBoxStockID";
+            this.comboBoxStockID.Size = new System.Drawing.Size(121, 24);
+            this.comboBoxStockID.TabIndex = 4;
+            this.comboBoxStockID.Click += new System.EventHandler(this.comboBox1_Click);
             // 
             // textBoxUpName
             // 
@@ -393,48 +395,70 @@
             this.textBoxUpName.Size = new System.Drawing.Size(100, 22);
             this.textBoxUpName.TabIndex = 3;
             // 
-            // label8
+            // lblNameStockUp
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(225, 107);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(98, 17);
-            this.label8.TabIndex = 2;
-            this.label8.Text = "Name of stock";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
+            this.lblNameStockUp.AutoSize = true;
+            this.lblNameStockUp.Location = new System.Drawing.Point(225, 107);
+            this.lblNameStockUp.Name = "lblNameStockUp";
+            this.lblNameStockUp.Size = new System.Drawing.Size(98, 17);
+            this.lblNameStockUp.TabIndex = 2;
+            this.lblNameStockUp.Text = "Name of stock";
+            this.lblNameStockUp.Click += new System.EventHandler(this.label8_Click);
             // 
-            // button3
+            // btnConfirmUp
             // 
-            this.button3.Location = new System.Drawing.Point(9, 205);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(83, 53);
-            this.button3.TabIndex = 1;
-            this.button3.Text = "Confirm Update";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btnConfirmUp.Location = new System.Drawing.Point(9, 205);
+            this.btnConfirmUp.Name = "btnConfirmUp";
+            this.btnConfirmUp.Size = new System.Drawing.Size(83, 53);
+            this.btnConfirmUp.TabIndex = 1;
+            this.btnConfirmUp.Text = "Confirm Update";
+            this.btnConfirmUp.UseVisualStyleBackColor = true;
+            this.btnConfirmUp.Click += new System.EventHandler(this.button3_Click);
             // 
-            // label7
+            // lblUpdateHeading
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(6, 3);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(54, 17);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "Update";
+            this.lblUpdateHeading.AutoSize = true;
+            this.lblUpdateHeading.Location = new System.Drawing.Point(6, 3);
+            this.lblUpdateHeading.Name = "lblUpdateHeading";
+            this.lblUpdateHeading.Size = new System.Drawing.Size(54, 17);
+            this.lblUpdateHeading.TabIndex = 0;
+            this.lblUpdateHeading.Text = "Update";
+            // 
+            // btnOrders
+            // 
+            this.btnOrders.Location = new System.Drawing.Point(20, 456);
+            this.btnOrders.Name = "btnOrders";
+            this.btnOrders.Size = new System.Drawing.Size(73, 44);
+            this.btnOrders.TabIndex = 4;
+            this.btnOrders.Text = "Orders manage";
+            this.btnOrders.UseVisualStyleBackColor = true;
+            this.btnOrders.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // btnLogout
+            // 
+            this.btnLogout.Location = new System.Drawing.Point(708, 468);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(75, 23);
+            this.btnLogout.TabIndex = 5;
+            this.btnLogout.Text = "Logout";
+            this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // Stock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.tabControl1);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(828, 512);
+            this.Controls.Add(this.btnLogout);
+            this.Controls.Add(this.btnOrders);
+            this.Controls.Add(this.tabControlStock);
+            this.Controls.Add(this.lblStockHeading);
             this.Name = "Stock";
             this.Text = "Stock";
             this.Load += new System.EventHandler(this.Stock_Load);
-            this.tabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
+            this.tabControlStock.ResumeLayout(false);
+            this.tabPageAdd.ResumeLayout(false);
+            this.tabPageAdd.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             this.tabPage3.ResumeLayout(false);
@@ -449,40 +473,42 @@
         #endregion
 
         private System.Windows.Forms.ListBox listBoxExpire;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblStockHeading;
+        private System.Windows.Forms.Label lblExpireHeading;
+        private System.Windows.Forms.TabControl tabControlStock;
+        private System.Windows.Forms.TabPage tabPageAdd;
+        private System.Windows.Forms.Button btnConfirmAdd;
+        private System.Windows.Forms.Label lblAddName;
+        private System.Windows.Forms.Label lblAddHeading;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TextBox textBoxName;
         private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button btnConfirmDelete;
+        private System.Windows.Forms.Label lblSubHeadingDelete;
+        private System.Windows.Forms.Label lblDeleteHeading;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.TextBox textBoxUpName;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lblNameStockUp;
+        private System.Windows.Forms.Button btnConfirmUp;
+        private System.Windows.Forms.Label lblUpdateHeading;
         private System.Windows.Forms.ListBox listBoxLow;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label lblLowHeading;
+        private System.Windows.Forms.Label lblStockID;
+        private System.Windows.Forms.ComboBox comboBoxStockID;
         private System.Windows.Forms.TextBox textBoxUpQuant;
         private System.Windows.Forms.TextBox textBoxUpExpire;
         private System.Windows.Forms.TextBox textBoxUpCost;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label lblQuantityUp;
+        private System.Windows.Forms.Label lblExpireUp;
+        private System.Windows.Forms.Label lblCostUp;
         private System.Windows.Forms.TextBox textBoxQuant;
         private System.Windows.Forms.TextBox textBoxExpire;
         private System.Windows.Forms.TextBox textBoxCost;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label lblAddQuantity;
+        private System.Windows.Forms.Label lblAddExpire;
+        private System.Windows.Forms.Label lblAddCost;
         private System.Windows.Forms.ComboBox comboBoxDelete;
+        private System.Windows.Forms.Button btnOrders;
+        private System.Windows.Forms.Button btnLogout;
     }
 }
