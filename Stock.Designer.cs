@@ -66,18 +66,25 @@
             this.lblUpdateHeading = new System.Windows.Forms.Label();
             this.btnOrders = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
+            this.comboBoxExpireDate = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.tabControlStock.SuspendLayout();
             this.tabPageAdd.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.tabPage4.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // listBoxExpire
             // 
             this.listBoxExpire.FormattingEnabled = true;
             this.listBoxExpire.ItemHeight = 16;
-            this.listBoxExpire.Location = new System.Drawing.Point(136, 79);
+            this.listBoxExpire.Location = new System.Drawing.Point(40, 77);
             this.listBoxExpire.Name = "listBoxExpire";
             this.listBoxExpire.Size = new System.Drawing.Size(120, 84);
             this.listBoxExpire.TabIndex = 0;
@@ -94,7 +101,7 @@
             // lblExpireHeading
             // 
             this.lblExpireHeading.AutoSize = true;
-            this.lblExpireHeading.Location = new System.Drawing.Point(133, 45);
+            this.lblExpireHeading.Location = new System.Drawing.Point(22, 319);
             this.lblExpireHeading.Name = "lblExpireHeading";
             this.lblExpireHeading.Size = new System.Drawing.Size(47, 17);
             this.lblExpireHeading.TabIndex = 2;
@@ -218,10 +225,9 @@
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.listBoxLow);
-            this.tabPage2.Controls.Add(this.lblLowHeading);
+            this.tabPage2.Controls.Add(this.groupBox2);
+            this.tabPage2.Controls.Add(this.groupBox1);
             this.tabPage2.Controls.Add(this.lblExpireHeading);
-            this.tabPage2.Controls.Add(this.listBoxExpire);
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -234,7 +240,7 @@
             // 
             this.listBoxLow.FormattingEnabled = true;
             this.listBoxLow.ItemHeight = 16;
-            this.listBoxLow.Location = new System.Drawing.Point(406, 79);
+            this.listBoxLow.Location = new System.Drawing.Point(58, 81);
             this.listBoxLow.Name = "listBoxLow";
             this.listBoxLow.Size = new System.Drawing.Size(120, 84);
             this.listBoxLow.TabIndex = 4;
@@ -242,7 +248,7 @@
             // lblLowHeading
             // 
             this.lblLowHeading.AutoSize = true;
-            this.lblLowHeading.Location = new System.Drawing.Point(403, 45);
+            this.lblLowHeading.Location = new System.Drawing.Point(55, 40);
             this.lblLowHeading.Name = "lblLowHeading";
             this.lblLowHeading.Size = new System.Drawing.Size(33, 17);
             this.lblLowHeading.TabIndex = 3;
@@ -444,6 +450,57 @@
             this.btnLogout.UseVisualStyleBackColor = true;
             this.btnLogout.Click += new System.EventHandler(this.button2_Click_1);
             // 
+            // comboBoxExpireDate
+            // 
+            this.comboBoxExpireDate.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxExpireDate.FormattingEnabled = true;
+            this.comboBoxExpireDate.Location = new System.Drawing.Point(151, 19);
+            this.comboBoxExpireDate.Name = "comboBoxExpireDate";
+            this.comboBoxExpireDate.Size = new System.Drawing.Size(121, 24);
+            this.comboBoxExpireDate.TabIndex = 5;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(37, 22);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(111, 17);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Expired stock in ";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(290, 25);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(42, 17);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "days ";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.listBoxExpire);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.comboBoxExpireDate);
+            this.groupBox1.Location = new System.Drawing.Point(52, 26);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(348, 263);
+            this.groupBox1.TabIndex = 8;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "groupBox1";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.lblLowHeading);
+            this.groupBox2.Controls.Add(this.listBoxLow);
+            this.groupBox2.Location = new System.Drawing.Point(488, 42);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(214, 201);
+            this.groupBox2.TabIndex = 9;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "groupBox2";
+            // 
             // Stock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -465,6 +522,10 @@
             this.tabPage3.PerformLayout();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -510,5 +571,10 @@
         private System.Windows.Forms.ComboBox comboBoxDelete;
         private System.Windows.Forms.Button btnOrders;
         private System.Windows.Forms.Button btnLogout;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox comboBoxExpireDate;
     }
 }

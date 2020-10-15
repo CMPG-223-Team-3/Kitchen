@@ -12,3 +12,17 @@ C:\Users\User\Desktop\KitchenStaff\obj\Debug\KitchenStaff.csproj.GenerateResourc
 C:\Users\User\Desktop\KitchenStaff\obj\Debug\KitchenStaff.csproj.CopyComplete
 C:\Users\User\Desktop\KitchenStaff\obj\Debug\KitchenStaff.exe
 C:\Users\User\Desktop\KitchenStaff\obj\Debug\KitchenStaff.pdb
+C:\Users\User\Desktop\Git\Kitchen\bin\Debug\KitchenStaff.exe.config
+C:\Users\User\Desktop\Git\Kitchen\bin\Debug\KitchenStaff.exe
+C:\Users\User\Desktop\Git\Kitchen\bin\Debug\KitchenStaff.pdb
+C:\Users\User\Desktop\Git\Kitchen\bin\Debug\MySql.Data.dll
+C:\Users\User\Desktop\Git\Kitchen\obj\Debug\KitchenStaff.csprojAssemblyReference.cache
+C:\Users\User\Desktop\Git\Kitchen\obj\Debug\KitchenStaff.Login.resources
+C:\Users\User\Desktop\Git\Kitchen\obj\Debug\KitchenStaff.Logout.resources
+C:\Users\User\Desktop\Git\Kitchen\obj\Debug\KitchenStaff.Orders.resources
+C:\Users\User\Desktop\Git\Kitchen\obj\Debug\KitchenStaff.Properties.Resources.resources
+C:\Users\User\Desktop\Git\Kitchen\obj\Debug\KitchenStaff.Stock.resources
+C:\Users\User\Desktop\Git\Kitchen\obj\Debug\KitchenStaff.csproj.GenerateResource.cache
+C:\Users\User\Desktop\Git\Kitchen\obj\Debug\KitchenStaff.csproj.CopyComplete
+C:\Users\User\Desktop\Git\Kitchen\obj\Debug\KitchenStaff.exe
+C:\Users\User\Desktop\Git\Kitchen\obj\Debug\KitchenStaff.pdb

@@ -16,10 +16,10 @@ namespace KitchenStaff
     {
 
         private MySqlConnection connection;
-        private string server = "sql7.freemysqlhosting.net";
-        private string database = "sql7368973";
-        private string uid = "sql7368973";
-        private string password = "1lFxsKtjXr";
+        private string server = "cmpg-223-db.ci6pbvbzz3x3.us-west-1.rds.amazonaws.comsql7.freemysqlhosting.net";
+        private string database = "admin";
+        private string uid = "admin";
+        private string password = "cmpg22310";
         string connectionstring;
 
         public Orders()
@@ -177,9 +177,7 @@ namespace KitchenStaff
 
 
 
-            connectionstring = "SERVE="+server+";"+"DATABASE="+database+";"+"UID"+uid
-                +";"+"PASSWORD"+password+";";
-            connection = new MySqlConnection(connectionstring);
+            connection = new MySqlConnection("SERVER=cmpg-223-db.ci6pbvbzz3x3.us-west-1.rds.amazonaws.com;DATABASE=sql17368973;UID=admin;PASSWORD=cmpg22310;");
             loadOrders();
         }
 

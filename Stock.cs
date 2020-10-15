@@ -15,10 +15,10 @@ namespace KitchenStaff
     public partial class Stock : Form
     {
         private MySqlConnection connection;
-        private string server = "sql7.freemysqlhosting.net";
-        private string database = "sql7368973";
-        private string uid = "sql7368973";
-        private string password = "1lFxsKtjXr";
+        private string server = "cmpg-223-db.ci6pbvbzz3x3.us-west-1.rds.amazonaws.comsql7.freemysqlhosting.net";
+        private string database = "admin";
+        private string uid = "admin";
+        private string password = "cmpg22310";
         string connectionstring;
 
         public Stock()
@@ -143,9 +143,7 @@ namespace KitchenStaff
 
             btnConfirmUp.BackColor = System.Drawing.Color.MidnightBlue;
 
-            connectionstring = "SERVE=" + server + ";" + "DATABASE=" + database + ";" + "UID" + uid
-                + ";" + "PASSWORD" + password + ";";
-            connection = new MySqlConnection(connectionstring);
+            connection = new MySqlConnection("SERVER=cmpg-223-db.ci6pbvbzz3x3.us-west-1.rds.amazonaws.com;DATABASE=sql17368973;UID=admin;PASSWORD=cmpg22310;");
 
 
         }
@@ -157,10 +155,12 @@ namespace KitchenStaff
             int recipeQuant = 0;
             int stockQuant = 0;
             string menuItem = "";
-
+            //expire list 
             // display stock in  list boxes 
             // query
-            string expiredateMin = "";
+            DateTime expiredateMin = new DateTime(DateTime.Now.Year, DateTime.Now.Month,DateTime.Now.Day);
+            expiredateMin = expiredateMin.AddDays(int.Parse(comboBoxExpireDate.SelectedItem.ToString()));
+            
             int minQaunt = 0;
             string query1 = "SELECT * FROM Stock WHERE Expriredate <'"+ expiredateMin+"'";
  
@@ -182,6 +182,8 @@ namespace KitchenStaff
             // close connection 
             connection.Close();
 
+
+            // low list 
             connection.Open();
             //put in comand
             string query2 = "SELECT * FROM Menu Item ";
