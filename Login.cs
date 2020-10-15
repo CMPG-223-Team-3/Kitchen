@@ -33,6 +33,7 @@ namespace KitchenStaff
 
         private void button1_Click(object sender, EventArgs e)
         {
+            //Test
              bool varify = false;
             // run input through data base to check if they are a staff member
 
